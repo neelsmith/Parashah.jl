@@ -1,0 +1,12 @@
+name = "Parashat"
+uuid = "4c28a2f8-dc3e-45b8-b5fb-5e47d9476d23"
+authors = ["Neel Smith  <dnsmith.neel@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Calendars = "2e69b1bb-2c9c-41e6-ab4b-04f4c0f206b8"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+
+[compat]
+Calendars = "1"
+julia = "1.10"
