@@ -1,3 +1,9 @@
+#
+# Readings and names of parashot are taken from
+# https://www.myjewishlearning.com/torah-portions/
+#
+
+
 const parashot_readings = Dict(
     # Bereshith
     1 => "Genesis 1.1-6.8",
