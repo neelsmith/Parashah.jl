@@ -1,5 +1,5 @@
 
-monthnames = Dict(
+const monthnames = Dict(
     1 => "Nisan",
     2 => "Iyar",
     3 => "Sivan",
@@ -26,15 +26,32 @@ systemnames = Dict(
     8 => "Julian day number"
 )
 
+
+"""Convert a `Date` to a date in the Hebrew calendar as 
+represented by the `Calendars` package.
+
+$(SIGNATURES)
+"""
 function hebrewforsysdate(dt::Dates.Date)::NTuple{4, Int64}
     ConvertDate(CE, year(dt), month(dt), day(dt), AM)
 end
 
+
+"""Convert a date in the Hebrew calendar, as represented by the `Calendars` package, to a `Dates.Date` object.
+
+$(SIGNATURES)
+"""
 function sysdateforhebrew(hdate::NTuple{4, Int64})::Dates.Date
-    Dates.Date(Calendars.Year(hdate), Calendars.Month(hdate), Calendars.Day(hdate))
+    gregorian = ConvertDate(AM, Calendars.Year(hdate), Calendars.Month(hdate), Calendars.Day(hdate), CE)
+    Dates.Date(Calendars.Year(gregorian), Calendars.Month(gregorian), Calendars.Day(gregorian))
 end
 
 
+"""Format a string for a date in the Hebrew calendar as
+represented by the `Calendars` package.
+
+$(SIGNATURES)
+"""
 function hebrewstring(hdate::NTuple{4, Int64})
     m = Calendars.Month(hdate)
     join([Calendars.Day(hdate), monthnames[m], Calendars.Year(hdate)], " ")

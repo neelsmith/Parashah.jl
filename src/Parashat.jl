@@ -2,6 +2,11 @@ module Parashat
 using Calendars
 using Dates
 
-include("months.jl")
+
+using Documenter, DocStringExtensions
+
+include("readings.jl")
+include("cal.jl")
+
 
 end # module Parashat
