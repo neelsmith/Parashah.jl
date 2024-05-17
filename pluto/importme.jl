@@ -8,7 +8,7 @@ using InteractiveUtils
 begin
 	using Pkg
 	Pkg.add(path=dirname(pwd()))
-	using Parashat
+	using Parashah
 end
 
 # ╔═╡ Cell order:

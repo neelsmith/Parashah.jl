@@ -1,4 +1,4 @@
-using Parashat
+using Parashah
 using Calendars
 using Dates
 
@@ -14,4 +14,4 @@ end
 
 sysdateforhebrew(today_hebrew)
 
-Parashat.monthnames[Calendars.Month(today_hebrew)]
+Parashah.monthnames[Calendars.Month(today_hebrew)]

@@ -9,7 +9,7 @@ begin
 	using Pkg
 	Pkg.add(path=dirname(pwd()))
 
-	using Parashat
+	using Parashah
 	using Calendars
 	using Dates
 end

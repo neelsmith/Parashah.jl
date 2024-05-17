@@ -1,4 +1,4 @@
-module Parashat
+module Parashah
 using Calendars
 using Dates
 
@@ -9,4 +9,4 @@ include("readings.jl")
 include("cal.jl")
 
 
-end # module Parashat
+end # module Parashah
